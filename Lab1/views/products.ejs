@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Products</title>
+    <link rel="stylesheet" href="/style.css">
+
+</head>
+
+<body>
+
+    <h2>Add Product</h2>
+    <form action="/add" method="post">
+        Name: <input name="name" required><br> Price: <input name="price" required><br> Quantity: <input name="quantity" required><br>
+        <button>Add</button>
+    </form>
+
+    <h2>Product List</h2>
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Action</th>
+        </tr>
+
+        <% products.forEach(p => { %>
+            <tr>
+                <td>
+                    <%= p.id %>
+                </td>
+                <td>
+                    <%= p.name %>
+                </td>
+                <td>
+                    <%= p.price %>
+                </td>
+                <td>
+                    <%= p.quantity %>
+                </td>
+                <td>
+                    <a href="/edit/<%= p.id %>">Edit</a> |
+                    <a href="/delete/<%= p.id %>" onclick="return confirm('Delete?')">
+      Delete
+    </a>
+                </td>
+            </tr>
+            <% }) %>
+
+    </table>
+
+</body>
+
+</html>
