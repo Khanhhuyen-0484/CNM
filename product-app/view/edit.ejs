@@ -1,0 +1,8 @@
+<h2>Chỉnh sửa sản phẩm</h2>
+
+<form method="POST" action="/edit/<%= product.id %>">
+    <input name="name" value="<%= product.name %>"><br>
+    <input name="price" value="<%= product.price %>"><br>
+    <input name="quantity" value="<%= product.quantity %>"><br><br>
+    <button>Cập nhật</button>
+</form>

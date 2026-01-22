@@ -1,0 +1,12 @@
+body {
+    font-family: Arial;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+td,
+th {
+    padding: 8px;
+}
