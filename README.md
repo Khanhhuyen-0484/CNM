@@ -1,3 +1,5 @@
+npm init -y
+npm install express ejs multer uuid @aws-sdk/client-s3 @aws-sdk/client-dynamodb @aws-sdk/lib-dynamodb dotenv
 aws.js
 const { S3Client } = require("@aws-sdk/client-s3");
 const { DynamoDBClient } = require("@aws-sdk/client-dynamodb");
